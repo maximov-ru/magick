@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <style>
+            .content {
+                min-height: 8000px;
+                padding: 0px 0px;
+                position: relative;
+                width: 2378px;
+            }
+
+            .dark_glow {
+                text-shadow: 0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000,0px 0px 5px #000;
+            }
+            .white_glow {
+                text-shadow: 0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white,0px 0px 5px white;
+            }
+
+			.item_card {
+                position: relative;
+                float: left;
+            	width: 472px;
+            	height: 778px;
+            	/*background-image: url('images/frontside.png');*/
+                border-top: 1px solid #aaa;
+                border-left: 1px solid #aaa;
+            }
+            .item_card .title_desc{
+                position: absolute;
+                width: 100%;
+                top: 20px;
+                text-align: justify;
+                font-size: 30px;
+            }
+            .item_card .card_name{
+                position: absolute;
+                width: 100%;
+                top: 60px;
+                text-align: center;
+                font-size: 30px;
+            }
+            .item_card .card_image{
+                 position: absolute;
+                 width: 100%;
+                 top: 60px;
+                 left: 50px;
+                 /*text-align: center;
+                 font-size: 30px;*/
+             }
+             .item_card .card_desc{
+                 position: absolute;
+                 width: 432;
+                 top: 395px;
+                 font-size: 20px;
+                 padding: 0 20px 0 20px;
+                 /*text-align: center;
+                 font-size: 30px;*/
+             }
+            .front_card img {
+                position: absolute;
+            }
+            .front_card .front_name {
+                position: absolute;
+                color: #fff;
+                font-size: 40px;
+                width: 100%;
+                text-align: center;
+                top: 77px;
+            }
+            .back_card {
+                position: relative;
+                float: right;
+                width: 472px;
+                height: 778px;
+                background-image: url('images/backside.png');
+                border-top: 1px solid #aaa;
+                border-left: 1px solid #aaa;
+            }
+            .back_card .back_name {
+                position: absolute;
+                color: #000;
+                font-size: 45px;
+                width: 100%;
+                text-align: center;
+                top: 156px;
+            }
+        </style>
+        <script type="text/javascript" src="http://yandex.st/jquery/1.8.3/jquery.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.0/knockout-min.js"></script>
+        <script type="text/javascript" src="persons.js"></script>
+        <script>
+            var Person = function(data) {
+                var t = this;
+                t.strong = data.strong;
+                t.magick = data.magick;
+                t.name = data.name;
+                t.char = data.char;
+                t.start = data.start;
+                t.image = data.image;
+                t.imageWidth = ko.observable(0);
+                t.imageHeight = ko.observable(0);
+                t.fillHeight = ko.observable(80);
+                t.descLength = ko.observable(0);
+                t.descHtml = '';
+                t.cardImageLeft = ko.computed(function() {
+                    return Math.ceil((487 - t.imageWidth())/2);
+                });
+                t.cardImageBottom = ko.computed(function() {
+                    return Math.ceil(( (778 - 20) - t.imageHeight())/2);
+                });
+                var startChar = 37650;
+                for(var i in data.desc){
+                    var chr = startChar + parseInt(i);
+                    //console.log('char','&#'+chr.toString(16)+';');
+                    t.descHtml = t.descHtml + ' &#'+chr.toString(16)+'; '+data.desc[i];
+                    t.descLength(t.descLength() + data.desc[i].length + 2);
+                }
+                //console.log('html',this.descHtml);
+                var lines = Math.ceil(this.descLength() / 42);
+                if(lines > 8){
+                    lines = 8;
+                    lines += Math.ceil( (this.descLength() - (42*8)) / 17.5);
+                }
+                t.fillHeight(800 -(lines*32 + 20));
+
+                if(t.image){
+                    var img  = new Image;
+                    $(img).bind('load error',function(){
+                        console.log('image is loaded',this,this.width,this.height);
+                        t.imageWidth(this.width);
+                        t.imageHeight(this.height);
+                    });
+                    img.src = 'images/'+t.image;
+                }
+
+
+                t.checkHeight = function(elements){
+                    var textDiv = $(elements).find('.desc_text');
+                    var fillDiv = $(elements).find('.fill');
+                    var textDivHeight = textDiv.height() + 20;
+                    var fillDivHeight = fillDiv.height();
+                    t.resizeCount--;
+                    if(t.resizeCount > 0){
+                        if((fillDivHeight > 80) && ( Math.abs(800 - fillDivHeight - textDivHeight ) > 5 ) ){
+                            console.log('podgon nomer ',(5 - t.resizeCount));
+                            fillDiv.height(800 - textDivHeight);
+                            window.setTimeout(
+                                    function (){t.checkHeight(elements);}, 200
+                            );
+                        }else{
+                            console.log('ne podgon nomer ',(5 - t.resizeCount),'params',fillDivHeight,textDiv.height());
+                        }
+                    }
+                };
+                t.afterRender = function(elements){
+                    //console.log('elements',$(elements).find('.desc_text'));
+                    t.resizeCount = 8;
+                    t.checkHeight(elements);
+                };
+            };
+            var PersonsSet = function(data) {
+                this.data = new Array();
+                for(var i in data){
+                    this.data.push(new Person(data[i]));
+                }
+            };
+
+            $(document).ready(function (){
+                //ko.applyBindings(new PersonsSet(window.persons));
+                var shadowStr = '';
+                var vals = [-5, -3, -1,0,1,3,5];
+                var vals = [0,0,0,0,0,0,0];
+                for(var i in vals){
+                	var topPos = vals[i];
+                	for(var j in vals){
+                		var leftPos = vals[j];
+                		shadowStr += ','+topPos+'px '+leftPos+'px 5px #000'
+                	}
+                }
+                console.log(shadowStr);
+            })
+        </script>
+	</head>
+	<body>
+    <script id="person-template" type="text/html">
+        <div class="pers_card">
+            <div class="pers_name white_glow" data-bind="text: name"></div>
+            <div class="pers_left_line">
+                <div class="pers_strong white_glow">МЕЧ <span data-bind="text: strong"></span></div>
+                <div class="pers_magick white_glow">МАГИЯ <span data-bind="text: magick"></span></div>
+            </div>
+            <div class="pers_right_line">
+                <div class="pers_life white_glow">ЖИЗНЬ</div>
+                <div class="pers_gold white_glow">ЗОЛОТО</div>
+            </div>
+            <div class="pers_desc">
+                <div class="pers_char"><span style="font-weight: bold;">Характер:</span><span data-bind="text: char">Хаотичный</span></div>
+                <div class="pers_start"><span style="font-weight: bold;">Старт:</span><span data-bind="html: start">Корчма</span></div>
+                <div class="main_desc"><img src="images/avanturist.png" data-bind="attr:{src: 'images/'+image}"><div class="fill" data-bind="style:{height: fillHeight()+ 'px'}">&nbsp;</div><div class="desc_text" data-bind="html: descHtml">Также только такие
+                    поля он может исследовать. Персонаж не может предпринять никаких действий на поле, с
+                    которого он начинает ход.
+                    &#9312; &#9313; &#9314;</div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="frontcard-template" type="text/html">
+        <div class="front_card">
+            <div class="front_name dark_glow" data-bind="text: name"></div>
+            <img src="images/avanturist.png" data-bind="attr:{src: 'images/'+image},style:{left: cardImageLeft()+'px',bottom: cardImageBottom()+'px'}">
+        </div>
+    </script>
+    <script id="backcard-template" type="text/html">
+        <div class="back_card">
+            <div class="back_name white_glow" data-bind="text: name"></div>
+        </div>
+    </script>
+        <div class="content">
+            <!-- ko foreach: data -->
+                <!-- ko template: {name: 'person-template', data: $data, afterRender: afterRender} -->
+                <!-- /ko -->
+            <!-- /ko -->
+            <div style="clear: both;"></div>
+            <!-- ko foreach: data -->
+                <!-- ko template: {name: 'frontcard-template', data: $data} -->
+                <!-- /ko -->
+            <!-- /ko -->
+            <div style="clear: both;"></div>
+            <!-- ko foreach: data -->
+            <!-- ko template: {name: 'backcard-template', data: $data} -->
+            <!-- /ko -->
+            <!-- /ko -->
+            <div class="item_card">
+                <div class="title_desc">Заклинание Заклинание</div>
+                <div class="card_name">Формула времени</div>
+                <div class="card_image"><img src="images/krt_formula_vremeni.png"></div>
+                <div class="card_desc">Описание этой карточки Описание этой карточки Описание этой карточки Описание этой карточки Описание этой карточки </div>
+            </div>
+        </div>
+	</body>
+</html>
