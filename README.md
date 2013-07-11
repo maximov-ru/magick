@@ -17,6 +17,6 @@ magick
 
 Все необходимые файлы лежат в репозитории.
 
-![Обложка коробки](/maximov-ru/magick/blob/master/russian_scan/cover.png?raw=true "Обложка на коробке")
-![некоторые персонажи](/maximov-ru/magick/blob/master/russian_scan/pers.png?raw=true)
+![Обложка коробки](https://github.com/maximov-ru/magick/blob/master/russian_scan/cover.png?raw=true "Обложка на коробке")
+![некоторые персонажи](https://github.com/maximov-ru/magick/blob/master/russian_scan/pers.png?raw=true)
 
